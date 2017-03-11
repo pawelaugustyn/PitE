@@ -10,10 +10,6 @@ args = parser.parse_args()
 file_to_parse = args.file_to_parse
 string_to_be_found = args.string_to_be_found
 Validator = InputFileValidator(file_to_parse)
-string = ""
-string += file_to_parse
-string += string_to_be_found
-print(string)
 
 if Validator.validate():
     result = ""
