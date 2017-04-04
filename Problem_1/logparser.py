@@ -21,7 +21,6 @@ class LogParser:
                     matching_lines.remove("PrChecker.Downs... INFO")
                 for line in matching_lines:
                     data.append(line.split(" "))
-                print(data)
                 return data
         else:
             raise FileNotFoundError("Brak pliku")
