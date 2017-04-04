@@ -15,12 +15,13 @@ if Validator.validate():
     result = ""
     for file in Validator.get_files_list():
         added = LogParser.parse_log(file, string_to_be_found)
-        if added:
-            result += "Plik {}:\n".format(file)
-            result += "\n".join(added) + "\n\n"
-    if len(result) > 0:
-        logs = open("logged_text.log", "w")
-        logs.write(result)
-        logs.close()
+        #if added:
+            #result += "Plik {}:\n".format(file)
+            #result += "\n".join(added) + "\n\n"
+   # if len(result) > 0:
+       # print(result)
+       # logs = open("logged_text.log", "w")
+       # logs.write(result)
+       # logs.close()
 else:
     raise FileNotFoundError("Nie znaleziono pliku {}".format(file_to_parse))
